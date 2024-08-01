@@ -22,7 +22,7 @@ describe('widget', () => {
         ["30569309025904","diners"],
         ["3530111333300000","jcb"],
         ["2200255555555555","mir"]
-    ])("%s is a %s card number", (card, type, done)=>{
+    ])("%s is a %s card number", async (card, type)=>{
         const widget = dom.window.document.querySelector('.widget');
         const validator = new CardValidator(widget);
         validator._input.dispatchEvent(new dom.window.Event('input'));
@@ -30,7 +30,6 @@ describe('widget', () => {
 
         setTimeout(() => {
             expect(validator._cards.querySelector(`.card.${type}`).classList.contains("active")).toBe(true);
-            done();
         }, 1001);
     });
 });
