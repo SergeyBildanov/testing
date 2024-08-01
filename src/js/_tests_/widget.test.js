@@ -32,18 +32,7 @@ describe('widget', () => {
             expect(validator._cards.querySelector(`.card.${type}`).classList.contains("active")).toBe(true);
             done();
         }, 1001);
-    })
-    test("4111111111111111 is a visa card number", (done)=>{
-        const widget = dom.window.document.querySelector('.widget');
-        const validator = new CardValidator(widget);
-        validator._input.dispatchEvent(new dom.window.Event('input'));
-        validator._input.value = "4111111111111111";
-
-        setTimeout(() => {
-            expect(validator._cards.querySelector(".card.visa").classList.contains("active")).toBe(true);
-            done();
-        }, 1001);
-    })
+    });
 });
 
 
