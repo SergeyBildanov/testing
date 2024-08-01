@@ -5,6 +5,10 @@ const {LicenseFilePlugin} = require("generate-license-file-webpack-plugin");
 
 module.exports = {
   devServer: {
+    historyApiFallback: true,
+    contentBase: path.resolve(__dirname, '/dist'),
+    open: true,
+    compress: true,
     port: 9000,
 },
   target: "web",
