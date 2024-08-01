@@ -1,16 +1,16 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const {LicenseFilePlugin} = require("generate-license-file-webpack-plugin");
+const { LicenseFilePlugin } = require("generate-license-file-webpack-plugin");
 
 module.exports = {
   devServer: {
     historyApiFallback: true,
-    contentBase: path.resolve(__dirname, '/dist'),
+    contentBase: path.resolve(__dirname, "/dist"),
     open: true,
     compress: true,
     port: 9000,
-},
+  },
   target: "web",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -54,10 +54,10 @@ module.exports = {
     }),
     new LicenseFilePlugin({
       outputFileName: "third-party-licenses.txt",
-      outputFolder: "./", 
+      outputFolder: "./",
       pathToPackageJson: "./package.json",
-      isDev: false, 
-      lineEnding: undefined, 
+      isDev: false,
+      lineEnding: undefined,
       append: ["./licenses.txt"],
       replace: {},
       exclude: [],
