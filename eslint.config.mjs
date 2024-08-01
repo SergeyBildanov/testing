@@ -12,7 +12,6 @@ export default [
   {
     rules: {
       "no-unused-vars": "warn",
-      "no-done-callback": "warn"
     },
   },
   {
