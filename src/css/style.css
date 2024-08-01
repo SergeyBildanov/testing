@@ -1,0 +1,59 @@
+body {
+    color: #999;
+}
+
+.cards-images{
+    display: flex;
+    align-items: center;
+}
+.card{
+    display: block;
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    opacity: 0.2;
+}
+.mir{
+    background-image: url("../img/icons8-mir-32.png");
+}
+.visa{
+    background-image: url("../img/card-visa.png");
+}
+.mastercard{
+    background-image: url("../img/card-mastercard.png");
+}
+.amex{
+    background-image: url("../img/creditcard-american-express.png");
+}
+.discover{
+    background-image: url("../img/discover.png");
+}
+.jcb{
+    background-image: url("../img/jcb-24-2.png");
+}
+.diners{
+    background-image: url("../img/diners-club.png");
+}
+.right{
+    background-image: url("../img/tick.png");
+}
+.wrong{
+    background-image: url("../img/error.png");
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:350px;
+}
+.mark{
+    display: none;
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+}
+.active{
+    opacity: 1;
+    display: block;
+}
